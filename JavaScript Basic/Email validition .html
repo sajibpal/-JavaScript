@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ #p1{color:red;}
+</style>
+<script>
+function validateForm() {
+
+    var x = document.forms["myForm"]["fname"].value;
+    var y=/^[a-zA-Z0-9\_\-]+\@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	
+    if (x.match(y) && x!="") {
+	
+        return true;
+    }
+    else{
+       alert("check must be email input");
+	   document.getElementById("p1").innerHTML =h;
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+ function myFunction(){
+  var day;
+  var time=new Date().getHours();
+  
+  if(time<12){
+    day="Good morning";
+   }
+  else if(time<20){
+   day="Good day";
+  } 
+  else{
+   day="Good night";
+   }
+ document.getElementById("demo").innerHTML=day;  
+ } 
+</script>
+
+</body>
+</html>

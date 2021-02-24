@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+ <button onclick="callfunction()">click</button>
+ <p id ="demo"></p>
+ <script>
+  var array=[
+   {name:"rajib",roll:154061},
+   {name:"sajib",roll:154045},
+   {name:"utsob",roll:154066},
+   ]
+   
+   showfunction();
+  
+  function callfunction(){
+  
+   array.sort(function(a,b){ return(a.roll-b.roll)});
+   document.getElementById("demo").innerHTML=array;
+   showfunction();
+  }
+  function showfunction(){
+    document.getElementById("demo").innerHTML=array[0].name+" "+array[0].roll+"<br>"+
+	array[1].name+" "+array[1].roll+"<br>"+ array[2].name+" "+array[2].roll+"<br>";
+  }
+ </script>
+</body>
+</html>
